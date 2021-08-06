@@ -1,0 +1,39 @@
+logs/
+
+# Project exclude paths
+/com.projecttracker.apiclient/target/
+/com.projecttracker.app/target/
+/com.projecttracker.common/target/
+/com.projecttracker.core/target/
+/com.projecttracker.db/target/
+/com.projecttracker.gui/target/
+/com.projecttracker.packaging/target/
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/libraries
+#This is not cross-patform anyway
+.idea/**/artifacts
+META-INF/
+
+
+# Generated files
+.idea/**/contentModel.xml
+out/
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+build/
+/DUMMY_PROFILE/
+
+# Project exclude paths
+/org.pdfencrypt.app/target/

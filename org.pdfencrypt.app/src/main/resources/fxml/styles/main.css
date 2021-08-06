@@ -1,0 +1,9 @@
+.main-logo {
+    -fx-image: url("../../images/logo.png")
+}
+
+.selected-dir-label {
+    -fx-border-color: lightgrey;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+}

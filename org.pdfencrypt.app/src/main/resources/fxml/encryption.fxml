@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="400.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pdfencrypt.gui.controller.EncryptionController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="256.0" prefWidth="338.0" spacing="15.0" stylesheets="@styles/main.css">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="userPasswordTextBox" promptText="%encryption.user_password" />
+                  <TextField fx:id="ownerPasswordTextBox" promptText="%encryption.owner_password" />
+                  <GridPane hgap="3.0" maxWidth="1.7976931348623157E308" vgap="3.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                      <ColumnConstraints halignment="LEFT" maxWidth="134.0" minWidth="10.0" prefWidth="91.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="inputDirButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#selectInputDir" text="%encryption.select_input_dir" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                        <Button fx:id="outputDirButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#selectOutputDir" text="%encryption.select_output_dir" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="inputDirLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="selected-dir-label" />
+                        <Label fx:id="outputDirLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="selected-dir-label" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="encryptButton" mnemonicParsing="false" onAction="#encrypt" text="%encryption.encrypt" VBox.vgrow="ALWAYS" />
+                  <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
