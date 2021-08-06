@@ -1,3 +1,7 @@
+.button {
+    -fx-cursor: hand;
+}
+
 .main-logo {
     -fx-image: url("../../images/logo.png")
 }
@@ -6,4 +10,14 @@
     -fx-border-color: lightgrey;
     -fx-border-width: 1;
     -fx-border-radius: 2;
+}
+
+.encrypt-button {
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
+.decrypt-button {
+    -fx-text-fill: white;
+    -fx-background-color: green;
 }

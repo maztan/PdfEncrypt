@@ -1,4 +1,4 @@
-package org.pdfencrypt.app.encryption;
+package org.pdfencrypt.app.services.encryption;
 
 import com.itextpdf.kernel.pdf.*;
 
@@ -23,5 +23,15 @@ public class PdfEncryptionService {
                         EncryptionConstants.ENCRYPTION_AES_128 | EncryptionConstants.DO_NOT_ENCRYPT_METADATA))
         );
         pdfDoc.close();
+    }
+
+    public static void decryptPdf(Path srcFilePath, Path destFilePath, String ownerPassword) throws IOException {
+        //byte[] userPasswordBytes = userPassword.getBytes(StandardCharsets.UTF_8);
+        byte[] ownerPasswordBytes = ownerPassword.getBytes(StandardCharsets.UTF_8);
+
+        ReaderProperties readerProperties = new ReaderProperties().setPassword(ownerPasswordBytes);
+        PdfReader pdfReader = new PdfReader(srcFilePath.toAbsolutePath().toString(), readerProperties);
+        PdfDocument pdfDocument = new PdfDocument(pdfReader, new PdfWriter(destFilePath.toAbsolutePath().toString()));
+        pdfDocument.close();
     }
 }
